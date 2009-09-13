@@ -1,10 +1,10 @@
 --- #YAML:1.0
 name:               Pod-Plainer
-version:            0.01
-abstract:           Perl extension for converting Pod to old style Pod.
+version:            1.00
+abstract:           Perl extension for converting Pod to old-style Pod.
 author:
     - Robin Barker <rmb1@npl.co.uk>
-license:            unknown
+license:            perl
 distribution_type:  module
 configure_requires:
     ExtUtils::MakeMaker:  0

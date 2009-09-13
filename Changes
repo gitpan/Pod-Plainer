@@ -1,6 +1,9 @@
 Revision history for Perl extension Pod::Plainer.
 
+1.00  2009-09-13
+	- added C<use deprecate>, updated AUTHOR email
+
 0.01  Sun Sep 13 14:58:42 2009
 	- original version; created by h2xs 1.23 with options
 		-XAn Pod::Plainer
-
+	- Plainer.pm t/plainer.t Makefile.PL from perl/ext/Pod-Plainer

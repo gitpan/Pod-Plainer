@@ -1,7 +1,8 @@
 Changes
 Makefile.PL
 MANIFEST
+Plainer.pm
 README
 t/plainer.t
-Plainer.pm
+t/pod.t
 META.yml                                 Module meta-data (added by MakeMaker)
