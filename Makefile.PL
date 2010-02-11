@@ -6,7 +6,7 @@ WriteMakefile(
     NAME          => 'Pod::Plainer',
     VERSION_FROM  => 'Plainer.pm',
     ABSTRACT_FROM => 'Plainer.pm',
-    AUTHOR        => 'Robin Barker <rmb1@npl.co.uk>',
+    AUTHOR        => 'Robin Barker <rmbarker@cpan.org>',
 
     INSTALLDIRS   => ($] < 5.011 ? 'perl' : 'site'),
     LICENSE       => 'perl',

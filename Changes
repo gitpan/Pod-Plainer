@@ -1,5 +1,8 @@
 Revision history for Perl extension Pod::Plainer.
 
+1.02  2010-02-11
+	- change email address 
+
 1.01  2009-09-20
 	- added t/pod-coverage.t
 	- added more documentation and Makefile.PL options
