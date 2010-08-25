@@ -1,5 +1,11 @@
 Revision history for Perl extension Pod::Plainer.
 
+1.03  2010-08-25
+	- deleted C<use if deprecate> to remove dependency on 'if',
+		which is not available in 5.006, as reported in #RT60721.
+		I think C<deprecate> is only necessary for versions that
+		appear in the core.
+
 1.02  2010-02-11
 	- change email address 
 
