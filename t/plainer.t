@@ -1,36 +1,35 @@
-#!./perl
+use strict;
+use warnings;
 
-use Pod::Plainer;
+use Test::More; 
+
+my @data = <DATA>;
+plan tests => 1 + (scalar @data)/2;
+require_ok('Pod::Plainer');
+
 my $parser = Pod::Plainer->new();
 my $header = "=pod\n\n";
 my $input  = 'plnr_in.pod';
 my $output = 'plnr_out.pod';
 
-my $test = 0;
-print "1..7\n";
-while( <DATA> ) {
-    my $expected = $header.<DATA>; 
+while( my $data = shift @data ) {
+    my $expected = $header.(shift @data); 
 
     open(IN, '>', $input) or die $!;
-    print IN $header, $_;
+    print IN $header, $data;
     close IN or die $!;
 
     open IN, '<', $input or die $!;
     open OUT, '>', $output or die $!;
     $parser->parse_from_filehandle(\*IN,\*OUT);
+    close IN;
 
     open OUT, '<', $output or die $!;
     my $returned; { local $/; $returned = <OUT>; }
-    
-    unless( $returned eq $expected ) {
-       print map { s/^/\#/mg; $_; }
-               map {+$_}               # to avoid readonly values
-                   "EXPECTED:\n", $expected, "GOT:\n", $returned;
-       print "not ";
-    }
-    printf "ok %d\n", ++$test; 
     close OUT;
-    close IN;
+    
+    chomp $data;
+    is($returned,$expected,"POD ".$data);
 }
 
 END { 
@@ -38,7 +37,7 @@ END {
     1 while unlink $output;
 }
 
-# $Id: plainer.t 247 2009-09-15 18:33:34Z rmb1 $
+# $Id: plainer.t 363 2014-07-04 09:09:41Z robin $
 
 __END__
 =head <> now reads in records

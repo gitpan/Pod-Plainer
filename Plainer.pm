@@ -2,10 +2,9 @@ package Pod::Plainer;
 use 5.006;
 use strict;
 use warnings;
-# use if $] >= 5.011, 'deprecate';
 use Pod::Parser;
 our @ISA = qw(Pod::Parser);
-our $VERSION = '1.03';
+our $VERSION = '1.04';
 
 our %E = qw( < lt > gt );
  
@@ -89,7 +88,7 @@ See L<Pod::Parser>.
 
 =head1 COPYRIGHT AND LICENSE
 
-Copyright (C) 2009, 2010 by Robin Barker
+Copyright (C) 2009, 2010, 2014 by Robin Barker
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.1 or,
@@ -97,4 +96,4 @@ at your option, any later version of Perl 5 you may have available.
 
 =cut
 
-$Id: Plainer.pm 257 2010-08-25 10:53:14Z robin $
+$Id: Plainer.pm 365 2014-07-04 19:39:20Z robin $

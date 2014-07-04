@@ -1,5 +1,9 @@
 Revision history for Perl extension Pod::Plainer.
 
+1.04  2014-07-04
+	- added META.json
+	- use Test::More
+
 1.03  2010-08-25
 	- deleted C<use if deprecate> to remove dependency on 'if',
 		which is not available in 5.006, as reported in #RT60721.

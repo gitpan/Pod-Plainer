@@ -1,4 +1,4 @@
-Pod-Plainer version 1.03
+Pod-Plainer version 1.04
 ========================
 
 This was a core module in the Perl distribution to aid adoption
@@ -22,13 +22,12 @@ This module requires these other modules and libraries:
 
 RECENT CHANGES
 
+1.04 Added META.json; use Test::More
 1.03 Removed C<use if ... deprecate>
 
 COPYRIGHT AND LICENCE
 
-Put the correct copyright and licence information here.
-
-Copyright (C) 2009, 2010 by Robin Barker
+Copyright (C) 2009, 2010, 2014 by Robin Barker
 
 This library is free software; you can redistribute it and/or modify
 it under the same terms as Perl itself, either Perl version 5.10.1 or,
